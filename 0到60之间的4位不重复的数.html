@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>随机数</title>
+</head>
+<body>
+<script>
+
+    ////    思路一:
+    //    var ary =[];
+    //    for (var i = 0;i<4;i++){
+    //        //求0-60之间的随机整数，包含0，和 60；
+    //        var rnd = Math.round(Math.random()*60);
+    //        //说明数组中已经存在这个数字，重复了；
+    //        if (ary.indexOf(rnd)!==-1){
+    //            i--;
+    //        }
+    //        else{
+    //            ary.push(rnd);
+    //        }
+    //
+    //    }
+    //    document.write(ary);
+
+
+    //   思路二
+    var ary = [];
+    //当ary.length==4就不进while循环
+    while(ary.length<4){
+        var rnd =Math.round(Math.random()*60);
+        if(ary.indexOf(rnd)===-1){//数组中没有的这个数字的时候，才给数组里放
+            ary.push(rnd);
+
+        }
+    }
+    document.write(ary);
+</script>
+
+</body>
+</html>
